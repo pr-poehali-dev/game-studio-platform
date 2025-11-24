@@ -29,9 +29,9 @@ const Index = () => {
       id: 1,
       title: 'Shadows of Silence',
       description: 'Погрузитесь в мир абсолютной тишины, где каждый звук может стать последним',
-      fullDescription: 'Shadows of Silence — это психологический хоррор от первого лица, где тишина становится вашим главным врагом. Исследуйте заброшенный исследовательский комплекс, где каждый шаг может привлечь внимание существ, живущих в темноте. Используйте звуковые ловушки, двигайтесь беззвучно и решайте головоломки, чтобы раскрыть тайну эксперимента "Тихий Протокол".',
+      fullDescription: 'Shadows of Silence — это психологический хоррор от первого лица, где тишина становится вашим главным врагом. Исследуйте заброшенный исследовательский комплекс, где каждый шаг может привлечь внимание существ, живущих в темноте.',
       price: '999₽',
-      image: '🎮',
+      image: 'https://cdn.poehali.dev/projects/7049da72-7855-41ff-bf00-880148f03df0/files/2f8cafac-180d-4d80-8bbf-90cdee183be0.jpg',
       tags: ['Хоррор', 'Выживание', '18+'],
       features: [
         'Уникальная система звуковой механики',
@@ -46,9 +46,9 @@ const Index = () => {
       id: 2,
       title: 'The Last Whisper',
       description: 'Исследуйте заброшенный особняк, где шёпот мертвых — единственный компас',
-      fullDescription: 'Погрузитесь в готическую атмосферу викторианского особняка Рэвенхилл. The Last Whisper сочетает элементы детективного расследования с хоррором выживания. Слушайте шёпот призраков, собирайте улики, восстанавливайте прошлое семьи и делайте выбор, который определит судьбу душ, застрявших между мирами.',
+      fullDescription: 'Погрузитесь в готическую атмосферу викторианского особняка Рэвенхилл. The Last Whisper сочетает элементы детективного расследования с хоррором выживания. Слушайте шёпот призраков, собирайте улики.',
       price: '1299₽',
-      image: '🏚️',
+      image: 'https://cdn.poehali.dev/projects/7049da72-7855-41ff-bf00-880148f03df0/files/96b0015b-b4d5-4b4a-9de8-61a6229b475b.jpg',
       tags: ['Психология', 'Атмосфера', '18+'],
       features: [
         'Система морального выбора',
@@ -64,8 +64,8 @@ const Index = () => {
       title: 'Blackout Protocol',
       description: 'Выживите в бункере, где свет — ваш единственный союзник против тьмы',
       price: '899₽',
-      fullDescription: 'Blackout Protocol — это кооперативный хоррор-шутер на 1-4 игроков. Ваша команда застряла в подземном военном бункере после неудачного эксперимента. Управляйте ограниченными источниками света, защищайтесь от тварей из тьмы и найдите выход, пока не закончился кислород. В одиночку — это survival horror, в команде — тактический экшен.',
-      image: '💀',
+      fullDescription: 'Blackout Protocol — это кооперативный хоррор-шутер на 1-4 игроков. Ваша команда застряла в подземном военном бункере после неудачного эксперимента. Управляйте ограниченными источниками света.',
+      image: 'https://cdn.poehali.dev/projects/7049da72-7855-41ff-bf00-880148f03df0/files/70c2e2eb-1bca-41f6-bb4e-04236c7e24d3.jpg',
       tags: ['Экшн', 'Хоррор', 'Мультиплеер'],
       features: [
         'Кооператив до 4 игроков',
@@ -83,25 +83,25 @@ const Index = () => {
       name: 'Season Pass 2025', 
       price: '1999₽', 
       type: 'DLC',
-      description: 'Получите доступ ко всем DLC 2025 года: 3 новых кампании, эксклюзивные скины, ранний доступ к обновлениям'
+      description: 'Получите доступ ко всем DLC 2025 года: 3 новых кампании, эксклюзивные скины'
     },
     { 
       name: 'Артбук "Кошмары"', 
       price: '599₽', 
       type: 'Мерч',
-      description: 'Концепт-арты, эскизы монстров и закулисье разработки на 120 страницах'
+      description: 'Концепт-арты, эскизы монстров на 120 страницах'
     },
     { 
       name: 'Саундтрек Collection', 
       price: '399₽', 
       type: 'Музыка',
-      description: '45 треков в форматах MP3 и FLAC от композитора Александра Темнова'
+      description: '45 треков в форматах MP3 и FLAC'
     },
     { 
       name: 'Коллекционное издание', 
       price: '4999₽', 
       type: 'Игра',
-      description: 'Все три игры + Season Pass + артбук + саундтрек + фигурка + стальной кейс'
+      description: 'Все три игры + Season Pass + артбук + саундтрек'
     }
   ];
 
@@ -111,111 +111,132 @@ const Index = () => {
       replies: 247, 
       author: 'DarkSeeker',
       lastPost: '2 часа назад',
-      content: 'Обсуждаем скрытую четвертую концовку. Кто-нибудь нашел все 12 записок? Похоже, они указывают на секретную комнату в лаборатории...'
+      content: 'Обсуждаем скрытую четвертую концовку. Кто-нибудь нашел все 12 записок?'
     },
     { 
       title: 'Гайд по выживанию в Blackout Protocol', 
       replies: 189, 
       author: 'SurvivalPro',
       lastPost: '5 часов назад',
-      content: 'Полный гайд для новичков: оптимальные билды, тактики для каждого уровня сложности, лучшие комбинации оружия. Обновлено под патч 2.3!'
+      content: 'Полный гайд для новичков: оптимальные билды, тактики'
     },
     { 
       title: 'Пасхалки в The Last Whisper', 
       replies: 156, 
       author: 'EasterHunter',
       lastPost: '1 день назад',
-      content: 'Кто заметил портрет разработчика в библиотеке? А еще в камине можно найти отсылку к первой игре студии!'
+      content: 'Кто заметил портрет разработчика в библиотеке?'
     },
     { 
       title: 'Технические проблемы и решения', 
       replies: 94, 
       author: 'TechSupport',
       lastPost: '3 дня назад',
-      content: 'Сборник решений частых проблем: FPS дропы, вылеты, проблемы со звуком. Перед созданием новой темы загляните сюда!'
+      content: 'Сборник решений частых проблем: FPS дропы, вылеты'
     }
   ];
 
   const news = [
-    { title: 'Анонс нового DLC для Shadows of Silence', date: '20 ноября 2024', content: 'DLC "Эхо прошлого" выйдет 15 декабря' },
-    { title: 'Обновление 2.3: новые механики страха', date: '15 ноября 2024', content: 'Добавлена система динамического саундтрека' },
-    { title: 'Интервью с главным дизайнером', date: '10 ноября 2024', content: 'Говорим о будущем студии и новых проектах' }
+    { title: 'Анонс нового DLC', date: '20 ноября 2024', content: 'DLC "Эхо прошлого" выйдет 15 декабря' },
+    { title: 'Обновление 2.3', date: '15 ноября 2024', content: 'Новые механики страха' },
+    { title: 'Интервью с дизайнером', date: '10 ноября 2024', content: 'О будущем студии' }
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <nav className="border-b border-border sticky top-0 bg-background/95 backdrop-blur-sm z-50">
+    <div className="min-h-screen bg-background text-foreground relative">
+      <svg style={{ position: 'absolute', width: 0, height: 0 }}>
+        <filter id="pencilTexture">
+          <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+        </filter>
+      </svg>
+
+      <nav className="border-b-4 border-black sticky top-0 bg-background z-50 sketchy-border shadow-lg">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-glow">DARK VOID STUDIOS</h1>
+            <h1 className="text-3xl font-bold text-primary rotate-[-2deg] glitch">
+              ✝ DARK VOID STUDIOS ✝
+            </h1>
             <div className="hidden md:flex gap-6">
-              {['Главная', 'Игры', 'Магазин', 'Сообщество', 'О студии', 'Новости', 'Поддержка', 'Форум'].map((item) => (
+              {['Главная', 'Игры', 'Магазин', 'Форум'].map((item) => (
                 <button
                   key={item}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-300 relative group"
+                  className="text-foreground hover:text-primary transition-all duration-300 relative font-bold text-lg hover:rotate-[-2deg] scribble-underline"
                 >
                   {item}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
                 </button>
               ))}
             </div>
-            <Button variant="outline" className="md:hidden">
+            <Button variant="outline" className="md:hidden sketchy-border">
               <Icon name="Menu" size={20} />
             </Button>
           </div>
         </div>
       </nav>
 
-      <section className="relative py-32 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-accent/20 to-transparent" />
+      <section className="relative py-20 px-4 overflow-hidden border-b-4 border-black">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 text-9xl rotate-12">☠</div>
+          <div className="absolute bottom-10 right-10 text-9xl -rotate-12">👁</div>
+        </div>
         <div className="container mx-auto text-center relative z-10 animate-fade-in">
-          <h2 className="text-6xl md:text-8xl font-bold mb-6 text-glow">ВОЙДИТЕ В ТЕМНОТУ</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Создаем игры, которые заставят ваше сердце биться быстрее. Каждая тень скрывает историю.
+          <h2 className="text-7xl md:text-9xl font-bold mb-6 text-primary rotate-[-1deg] text-glow">
+            ВОЙДИТЕ<br/>В ТЕМНОТУ
+          </h2>
+          <p className="text-xl text-foreground mb-8 max-w-2xl mx-auto font-bold">
+            ⚠ Создаем игры, которые заставят ваше сердце биться быстрее ⚠
           </p>
-          <div className="flex gap-4 justify-center">
-            <Button size="lg" className="glow-red">
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Button size="lg" className="glow-red sketchy-border font-bold text-lg rotate-[-1deg]">
               <Icon name="Gamepad2" size={20} className="mr-2" />
-              Наши игры
+              НАШИ ИГРЫ
             </Button>
-            <Button size="lg" variant="outline">
-              <Icon name="Play" size={20} className="mr-2" />
-              Смотреть трейлер
+            <Button size="lg" variant="outline" className="sketchy-border font-bold text-lg rotate-[1deg]">
+              <Icon name="Skull" size={20} className="mr-2" />
+              ТРЕЙЛЕР
             </Button>
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 border-b-4 border-black">
         <div className="container mx-auto">
-          <h3 className="text-4xl font-bold mb-12 text-center">НАШИ ИГРЫ</h3>
+          <h3 className="text-5xl font-bold mb-12 text-center text-primary rotate-[-1deg]">
+            ☠ НАШИ ИГРЫ ☠
+          </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {games.map((game, idx) => (
               <Card 
                 key={idx} 
-                className="bg-card border-border hover:border-primary transition-all duration-300 hover:glow-red group animate-scale-in cursor-pointer" 
+                className="bg-card sketchy-border hover:glow-red group animate-scale-in cursor-pointer transition-all hover:rotate-[-2deg] overflow-hidden" 
                 style={{ animationDelay: `${idx * 100}ms` }}
                 onClick={() => setSelectedGame(game)}
               >
                 <CardHeader>
-                  <div className="text-6xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">
-                    {game.image}
+                  <div className="mb-4 overflow-hidden sketchy-border">
+                    <img 
+                      src={game.image} 
+                      alt={game.title}
+                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-125 brightness-95"
+                    />
                   </div>
-                  <CardTitle className="text-2xl">{game.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground">{game.description}</CardDescription>
+                  <CardTitle className="text-2xl text-primary rotate-[-1deg]">{game.title}</CardTitle>
+                  <CardDescription className="text-foreground font-bold text-sm">{game.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex gap-2 flex-wrap">
                     {game.tags.map((tag, i) => (
-                      <Badge key={i} variant="secondary">{tag}</Badge>
+                      <Badge key={i} variant="secondary" className="sketchy-border font-bold rotate-[-1deg]">
+                        {tag}
+                      </Badge>
                     ))}
                   </div>
                 </CardContent>
                 <CardFooter className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-primary">{game.price}</span>
-                  <Button className="glow-red" onClick={(e) => { e.stopPropagation(); setSelectedGame(game); }}>
-                    <Icon name="Info" size={16} className="mr-2" />
-                    Подробнее
+                  <span className="text-2xl font-bold text-primary rotate-[2deg]">{game.price}</span>
+                  <Button className="glow-red sketchy-border font-bold" onClick={(e) => { e.stopPropagation(); setSelectedGame(game); }}>
+                    <Icon name="Eye" size={16} className="mr-2" />
+                    СМОТРЕТЬ
                   </Button>
                 </CardFooter>
               </Card>
@@ -224,40 +245,43 @@ const Index = () => {
         </div>
       </section>
 
-      <Separator className="my-16" />
+      <div className="h-4 bg-primary opacity-20"></div>
 
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 border-b-4 border-black">
         <div className="container mx-auto">
           <Tabs defaultValue="store" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12">
-              <TabsTrigger value="store">
-                <Icon name="Store" size={16} className="mr-2" />
-                Магазин
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12 sketchy-border">
+              <TabsTrigger value="store" className="font-bold text-lg">
+                <Icon name="ShoppingCart" size={16} className="mr-2" />
+                МАГАЗИН
               </TabsTrigger>
-              <TabsTrigger value="forum">
+              <TabsTrigger value="forum" className="font-bold text-lg">
                 <Icon name="MessageSquare" size={16} className="mr-2" />
-                Форум
+                ФОРУМ
               </TabsTrigger>
             </TabsList>
             
             <TabsContent value="store" className="animate-fade-in">
-              <h3 className="text-3xl font-bold mb-8 text-center">МАГАЗИН</h3>
+              <h3 className="text-4xl font-bold mb-8 text-center text-primary rotate-[-1deg]">
+                💀 МАГАЗИН 💀
+              </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {storeItems.map((item, idx) => (
                   <Card 
                     key={idx} 
-                    className="bg-card border-border hover:border-primary transition-all duration-300 cursor-pointer"
+                    className="bg-card sketchy-border hover:glow-red transition-all cursor-pointer hover:rotate-[2deg]"
                     onClick={() => setSelectedStoreItem(item)}
                   >
                     <CardHeader>
-                      <Badge variant="outline" className="w-fit mb-2">{item.type}</Badge>
-                      <CardTitle className="text-lg">{item.name}</CardTitle>
+                      <Badge variant="outline" className="w-fit mb-2 font-bold sketchy-border">{item.type}</Badge>
+                      <CardTitle className="text-lg font-bold rotate-[-1deg]">{item.name}</CardTitle>
+                      <p className="text-xs text-muted-foreground">{item.description}</p>
                     </CardHeader>
                     <CardFooter className="flex justify-between items-center">
                       <span className="text-xl font-bold text-primary">{item.price}</span>
-                      <Button size="sm" onClick={(e) => { e.stopPropagation(); setSelectedStoreItem(item); }}>
+                      <Button size="sm" className="sketchy-border font-bold">
                         <Icon name="ShoppingBag" size={14} className="mr-1" />
-                        Купить
+                        КУПИТЬ
                       </Button>
                     </CardFooter>
                   </Card>
@@ -266,21 +290,25 @@ const Index = () => {
             </TabsContent>
             
             <TabsContent value="forum" className="animate-fade-in">
-              <h3 className="text-3xl font-bold mb-8 text-center">ФОРУМ СООБЩЕСТВА</h3>
+              <h3 className="text-4xl font-bold mb-8 text-center text-primary rotate-[-1deg]">
+                👁 ФОРУМ 👁
+              </h3>
               <div className="max-w-4xl mx-auto space-y-4">
                 {forumTopics.map((topic, idx) => (
                   <Card 
                     key={idx} 
-                    className="bg-card border-border hover:border-primary transition-all duration-300 cursor-pointer"
+                    className="bg-card sketchy-border hover:glow-red transition-all cursor-pointer hover:rotate-[-1deg]"
                     onClick={() => setSelectedTopic(topic)}
                   >
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
-                          <CardTitle className="text-lg mb-2">{topic.title}</CardTitle>
-                          <CardDescription>Автор: {topic.author} • {topic.lastPost}</CardDescription>
+                          <CardTitle className="text-lg mb-2 font-bold">{topic.title}</CardTitle>
+                          <CardDescription className="font-bold text-xs">
+                            ✍ {topic.author} • {topic.lastPost}
+                          </CardDescription>
                         </div>
-                        <Badge variant="secondary" className="ml-4">
+                        <Badge variant="secondary" className="ml-4 sketchy-border font-bold">
                           <Icon name="MessageCircle" size={12} className="mr-1" />
                           {topic.replies}
                         </Badge>
@@ -288,9 +316,9 @@ const Index = () => {
                     </CardHeader>
                   </Card>
                 ))}
-                <Button className="w-full glow-red">
+                <Button className="w-full glow-red sketchy-border font-bold text-lg rotate-[1deg]">
                   <Icon name="Plus" size={16} className="mr-2" />
-                  Создать новую тему
+                  СОЗДАТЬ ТЕМУ
                 </Button>
               </div>
             </TabsContent>
@@ -298,21 +326,25 @@ const Index = () => {
         </div>
       </section>
 
-      <Separator className="my-16" />
-
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 border-b-4 border-black bg-muted/30">
         <div className="container mx-auto">
-          <h3 className="text-4xl font-bold mb-12 text-center">ПОСЛЕДНИЕ НОВОСТИ</h3>
+          <h3 className="text-4xl font-bold mb-12 text-center text-primary rotate-[1deg]">
+            ⚠ НОВОСТИ ⚠
+          </h3>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {news.map((item, idx) => (
-              <Card key={idx} className="bg-card border-border hover:border-primary transition-all duration-300 cursor-pointer animate-fade-in" style={{ animationDelay: `${idx * 100}ms` }}>
+              <Card 
+                key={idx} 
+                className="bg-card sketchy-border hover:glow-red transition-all cursor-pointer animate-fade-in hover:rotate-[-2deg]" 
+                style={{ animationDelay: `${idx * 100}ms` }}
+              >
                 <CardHeader>
-                  <CardTitle className="text-lg">{item.title}</CardTitle>
-                  <CardDescription className="flex items-center gap-2 mb-2">
+                  <CardTitle className="text-lg font-bold rotate-[-1deg]">{item.title}</CardTitle>
+                  <CardDescription className="flex items-center gap-2 font-bold">
                     <Icon name="Calendar" size={14} />
                     {item.date}
                   </CardDescription>
-                  <p className="text-sm text-muted-foreground">{item.content}</p>
+                  <p className="text-sm text-foreground font-bold">{item.content}</p>
                 </CardHeader>
               </Card>
             ))}
@@ -320,91 +352,89 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="border-t border-border py-12 px-4 mt-16">
+      <footer className="border-t-4 border-black py-12 px-4 bg-secondary/10">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h4 className="font-bold text-xl mb-4">О студии</h4>
-              <p className="text-muted-foreground text-sm">
+              <h4 className="font-bold text-xl mb-4 text-primary">О СТУДИИ</h4>
+              <p className="text-foreground text-sm font-bold">
                 Dark Void Studios создает атмосферные хоррор-игры с 2020 года.
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-xl mb-4">Ссылки</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li className="hover:text-primary cursor-pointer transition-colors">Карьера</li>
-                <li className="hover:text-primary cursor-pointer transition-colors">Пресс-кит</li>
-                <li className="hover:text-primary cursor-pointer transition-colors">Контакты</li>
+              <h4 className="font-bold text-xl mb-4 text-primary">ССЫЛКИ</h4>
+              <ul className="space-y-2 text-sm text-foreground font-bold">
+                <li className="hover:text-primary cursor-pointer transition-colors">⚡ Карьера</li>
+                <li className="hover:text-primary cursor-pointer transition-colors">⚡ Пресс-кит</li>
+                <li className="hover:text-primary cursor-pointer transition-colors">⚡ Контакты</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold text-xl mb-4">Поддержка</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li className="hover:text-primary cursor-pointer transition-colors">FAQ</li>
-                <li className="hover:text-primary cursor-pointer transition-colors">Техподдержка</li>
-                <li className="hover:text-primary cursor-pointer transition-colors">Политика возврата</li>
+              <h4 className="font-bold text-xl mb-4 text-primary">ПОДДЕРЖКА</h4>
+              <ul className="space-y-2 text-sm text-foreground font-bold">
+                <li className="hover:text-primary cursor-pointer transition-colors">❓ FAQ</li>
+                <li className="hover:text-primary cursor-pointer transition-colors">🔧 Техподдержка</li>
+                <li className="hover:text-primary cursor-pointer transition-colors">💰 Возврат</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold text-xl mb-4">Соцсети</h4>
+              <h4 className="font-bold text-xl mb-4 text-primary">СОЦСЕТИ</h4>
               <div className="flex gap-4">
-                <Icon name="Youtube" className="cursor-pointer hover:text-primary transition-colors" />
-                <Icon name="Twitter" className="cursor-pointer hover:text-primary transition-colors" />
-                <Icon name="Facebook" className="cursor-pointer hover:text-primary transition-colors" />
+                <Icon name="Youtube" className="cursor-pointer hover:text-primary transition-colors" size={28} />
+                <Icon name="Twitter" className="cursor-pointer hover:text-primary transition-colors" size={28} />
+                <Icon name="Facebook" className="cursor-pointer hover:text-primary transition-colors" size={28} />
               </div>
             </div>
           </div>
-          <Separator className="my-8" />
-          <p className="text-center text-sm text-muted-foreground">
-            © 2024 Dark Void Studios. Все права защищены.
+          <div className="h-1 bg-black my-8 opacity-30"></div>
+          <p className="text-center text-sm text-foreground font-bold">
+            ✝ © 2024 Dark Void Studios. Все права защищены. ✝
           </p>
         </div>
       </footer>
 
       <Dialog open={!!selectedGame} onOpenChange={() => setSelectedGame(null)}>
-        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto bg-card border-primary">
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto bg-card sketchy-border">
           {selectedGame && (
             <>
               <DialogHeader>
-                <div className="text-6xl mb-4 text-center">{selectedGame.image}</div>
-                <DialogTitle className="text-3xl text-center">{selectedGame.title}</DialogTitle>
-                <DialogDescription className="text-center text-lg">
+                <div className="mb-4 sketchy-border overflow-hidden">
+                  <img src={selectedGame.image} alt={selectedGame.title} className="w-full h-64 object-cover filter contrast-125" />
+                </div>
+                <DialogTitle className="text-3xl text-center text-primary rotate-[-1deg]">{selectedGame.title}</DialogTitle>
+                <DialogDescription className="text-center text-lg font-bold text-foreground">
                   {selectedGame.description}
                 </DialogDescription>
               </DialogHeader>
               <div className="space-y-6 py-4">
-                <div>
-                  <h4 className="font-bold text-xl mb-3">Описание</h4>
-                  <p className="text-muted-foreground leading-relaxed">{selectedGame.fullDescription}</p>
+                <div className="sketchy-border p-4 bg-muted/20">
+                  <h4 className="font-bold text-xl mb-3 text-primary">ОПИСАНИЕ</h4>
+                  <p className="text-foreground leading-relaxed font-bold">{selectedGame.fullDescription}</p>
                 </div>
-                <div>
-                  <h4 className="font-bold text-xl mb-3">Особенности</h4>
+                <div className="sketchy-border p-4 bg-muted/20">
+                  <h4 className="font-bold text-xl mb-3 text-primary">ОСОБЕННОСТИ</h4>
                   <ul className="space-y-2">
                     {selectedGame.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <Icon name="Check" size={16} className="text-primary mt-1 flex-shrink-0" />
-                        <span className="text-muted-foreground">{feature}</span>
+                        <span className="text-primary font-bold">✓</span>
+                        <span className="text-foreground font-bold">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div>
-                  <h4 className="font-bold text-xl mb-3">Системные требования</h4>
-                  <p className="text-muted-foreground">{selectedGame.requirements}</p>
-                </div>
                 <div className="flex gap-2 flex-wrap">
                   {selectedGame.tags.map((tag, i) => (
-                    <Badge key={i} variant="secondary">{tag}</Badge>
+                    <Badge key={i} variant="secondary" className="sketchy-border font-bold">{tag}</Badge>
                   ))}
                 </div>
               </div>
               <DialogFooter className="flex gap-3">
-                <Button variant="outline" onClick={() => setSelectedGame(null)}>
-                  Закрыть
+                <Button variant="outline" onClick={() => setSelectedGame(null)} className="sketchy-border font-bold">
+                  ЗАКРЫТЬ
                 </Button>
-                <Button className="glow-red">
+                <Button className="glow-red sketchy-border font-bold">
                   <Icon name="ShoppingCart" size={16} className="mr-2" />
-                  Купить за {selectedGame.price}
+                  КУПИТЬ {selectedGame.price}
                 </Button>
               </DialogFooter>
             </>
@@ -413,28 +443,28 @@ const Index = () => {
       </Dialog>
 
       <Dialog open={!!selectedStoreItem} onOpenChange={() => setSelectedStoreItem(null)}>
-        <DialogContent className="bg-card border-primary">
+        <DialogContent className="bg-card sketchy-border">
           {selectedStoreItem && (
             <>
               <DialogHeader>
-                <Badge variant="outline" className="w-fit mb-2">{selectedStoreItem.type}</Badge>
-                <DialogTitle className="text-2xl">{selectedStoreItem.name}</DialogTitle>
-                <DialogDescription className="text-base pt-2">
+                <Badge variant="outline" className="w-fit mb-2 font-bold sketchy-border">{selectedStoreItem.type}</Badge>
+                <DialogTitle className="text-2xl text-primary rotate-[-1deg]">{selectedStoreItem.name}</DialogTitle>
+                <DialogDescription className="text-base pt-2 font-bold text-foreground">
                   {selectedStoreItem.description}
                 </DialogDescription>
               </DialogHeader>
               <div className="py-4">
-                <div className="text-4xl font-bold text-primary text-center">
+                <div className="text-4xl font-bold text-primary text-center rotate-[2deg]">
                   {selectedStoreItem.price}
                 </div>
               </div>
               <DialogFooter className="flex gap-3">
-                <Button variant="outline" onClick={() => setSelectedStoreItem(null)}>
-                  Отмена
+                <Button variant="outline" onClick={() => setSelectedStoreItem(null)} className="sketchy-border font-bold">
+                  ОТМЕНА
                 </Button>
-                <Button className="glow-red">
+                <Button className="glow-red sketchy-border font-bold">
                   <Icon name="ShoppingBag" size={16} className="mr-2" />
-                  Купить
+                  КУПИТЬ
                 </Button>
               </DialogFooter>
             </>
@@ -443,32 +473,30 @@ const Index = () => {
       </Dialog>
 
       <Dialog open={!!selectedTopic} onOpenChange={() => setSelectedTopic(null)}>
-        <DialogContent className="max-w-2xl bg-card border-primary">
+        <DialogContent className="max-w-2xl bg-card sketchy-border">
           {selectedTopic && (
             <>
               <DialogHeader>
-                <DialogTitle className="text-2xl">{selectedTopic.title}</DialogTitle>
-                <DialogDescription className="flex items-center gap-4 pt-2">
-                  <span>Автор: {selectedTopic.author}</span>
+                <DialogTitle className="text-2xl text-primary rotate-[-1deg]">{selectedTopic.title}</DialogTitle>
+                <DialogDescription className="flex items-center gap-4 pt-2 font-bold">
+                  <span>✍ {selectedTopic.author}</span>
                   <span>•</span>
                   <span className="flex items-center gap-1">
                     <Icon name="MessageCircle" size={14} />
-                    {selectedTopic.replies} ответов
+                    {selectedTopic.replies}
                   </span>
-                  <span>•</span>
-                  <span>{selectedTopic.lastPost}</span>
                 </DialogDescription>
               </DialogHeader>
-              <div className="py-4">
-                <p className="text-foreground leading-relaxed">{selectedTopic.content}</p>
+              <div className="py-4 sketchy-border p-4 bg-muted/20">
+                <p className="text-foreground leading-relaxed font-bold">{selectedTopic.content}</p>
               </div>
               <DialogFooter className="flex gap-3">
-                <Button variant="outline" onClick={() => setSelectedTopic(null)}>
-                  Закрыть
+                <Button variant="outline" onClick={() => setSelectedTopic(null)} className="sketchy-border font-bold">
+                  ЗАКРЫТЬ
                 </Button>
-                <Button className="glow-red">
+                <Button className="glow-red sketchy-border font-bold">
                   <Icon name="MessageSquare" size={16} className="mr-2" />
-                  Ответить
+                  ОТВЕТИТЬ
                 </Button>
               </DialogFooter>
             </>
