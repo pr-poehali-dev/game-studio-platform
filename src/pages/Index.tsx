@@ -23,6 +23,8 @@ const Index = () => {
   const [selectedGame, setSelectedGame] = useState<Game | null>(null);
   const [selectedStoreItem, setSelectedStoreItem] = useState<any>(null);
   const [selectedTopic, setSelectedTopic] = useState<any>(null);
+  const [selectedWikiGame, setSelectedWikiGame] = useState<Game | null>(null);
+  const [selectedWikiArticle, setSelectedWikiArticle] = useState<any>(null);
 
   const games: Game[] = [
     {
@@ -105,6 +107,27 @@ const Index = () => {
     }
   ];
 
+  const wikiData = {
+    1: [
+      { title: 'Существа тьмы', content: 'Полный бестиарий всех монстров Shadows of Silence. Слепые охотники реагируют на звук...', edits: 45, lastEdit: 'SilentHunter, 1 час назад' },
+      { title: 'Карта исследовательского комплекса', content: 'Детальная карта всех уровней с отметками секретов и опасных зон', edits: 89, lastEdit: 'MapMaster, 3 часа назад' },
+      { title: 'Лор и предыстория', content: 'История эксперимента "Тишина". Что пошло не так в 2019 году?', edits: 124, lastEdit: 'LoreKeeper, 5 часов назад' },
+      { title: 'Гайд по концовкам', content: 'Как получить все 4 концовки. Требования и условия для каждой', edits: 67, lastEdit: 'EndingSeeker, 1 день назад' }
+    ],
+    2: [
+      { title: 'Семья Рэвенхилл', content: 'Генеалогическое древо и биографии всех членов проклятой семьи', edits: 156, lastEdit: 'HistoryBuff, 2 часа назад' },
+      { title: 'Призраки особняка', content: 'Каталог всех духов, их истории и способы взаимодействия', edits: 203, lastEdit: 'GhostWhisperer, 4 часа назад' },
+      { title: 'Секретные комнаты', content: 'Локации всех скрытых помещений и механизмы их открытия', edits: 91, lastEdit: 'SecretFinder, 6 часов назад' },
+      { title: 'Артефакты и предметы', content: 'База данных всех коллекционных предметов с описаниями', edits: 134, lastEdit: 'Collector, 2 дня назад' }
+    ],
+    3: [
+      { title: 'Оружие и модификации', content: 'Полный гайд по крафту и апгрейду всего арсенала', edits: 278, lastEdit: 'WeaponMaster, 30 минут назад' },
+      { title: 'Типы зараженных', content: 'Бестиарий противников, слабости и тактики борьбы', edits: 189, lastEdit: 'TacticalGamer, 2 часа назад' },
+      { title: 'Карты уровней', content: 'Схемы всех процедурно генерируемых локаций бункера', edits: 145, lastEdit: 'Navigator, 5 часов назад' },
+      { title: 'Билды персонажей', content: 'Оптимальные сборки навыков для разных стилей игры', edits: 312, lastEdit: 'BuildCrafter, 1 день назад' }
+    ]
+  };
+
   const forumTopics = [
     { 
       title: 'Теории о концовке Shadows of Silence', 
@@ -158,7 +181,7 @@ const Index = () => {
               ✝ DARK VOID STUDIOS ✝
             </h1>
             <div className="hidden md:flex gap-6">
-              {['Главная', 'Игры', 'Магазин', 'Форум'].map((item) => (
+              {['Главная', 'Игры', 'Магазин', 'Вики', 'Форум'].map((item) => (
                 <button
                   key={item}
                   className="text-foreground hover:text-primary transition-all duration-300 relative font-bold text-lg hover:rotate-[-2deg] scribble-underline"
@@ -250,10 +273,14 @@ const Index = () => {
       <section className="py-16 px-4 border-b-4 border-black">
         <div className="container mx-auto">
           <Tabs defaultValue="store" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12 sketchy-border">
+            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12 sketchy-border">
               <TabsTrigger value="store" className="font-bold text-lg">
                 <Icon name="ShoppingCart" size={16} className="mr-2" />
                 МАГАЗИН
+              </TabsTrigger>
+              <TabsTrigger value="wiki" className="font-bold text-lg">
+                <Icon name="BookOpen" size={16} className="mr-2" />
+                ВИКИ
               </TabsTrigger>
               <TabsTrigger value="forum" className="font-bold text-lg">
                 <Icon name="MessageSquare" size={16} className="mr-2" />
@@ -286,6 +313,67 @@ const Index = () => {
                     </CardFooter>
                   </Card>
                 ))}
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="wiki" className="animate-fade-in">
+              <h3 className="text-4xl font-bold mb-8 text-center text-primary rotate-[-1deg]">
+                📖 ВИКИ ФЭНДОМ 📖
+              </h3>
+              <p className="text-center text-foreground font-bold mb-8 max-w-2xl mx-auto">
+                ⚠ Энциклопедия игр, созданная фанатами. Редактируйте и дополняйте! ⚠
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 mb-12">
+                {games.map((game, idx) => (
+                  <Card 
+                    key={idx} 
+                    className="bg-card sketchy-border hover:glow-red transition-all cursor-pointer hover:rotate-[2deg]"
+                    onClick={() => setSelectedWikiGame(game)}
+                  >
+                    <CardHeader>
+                      <div className="mb-3 overflow-hidden sketchy-border">
+                        <img 
+                          src={game.image} 
+                          alt={game.title}
+                          className="w-full h-32 object-cover filter contrast-125"
+                        />
+                      </div>
+                      <CardTitle className="text-lg font-bold rotate-[-1deg]">{game.title}</CardTitle>
+                      <CardDescription className="text-xs font-bold">
+                        📝 {wikiData[game.id as keyof typeof wikiData].length} статей
+                      </CardDescription>
+                    </CardHeader>
+                    <CardFooter>
+                      <Button size="sm" className="w-full sketchy-border font-bold">
+                        <Icon name="BookOpen" size={14} className="mr-1" />
+                        ОТКРЫТЬ ВИКИ
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                ))}
+              </div>
+              <div className="max-w-4xl mx-auto">
+                <Card className="sketchy-border bg-muted/20">
+                  <CardHeader>
+                    <CardTitle className="text-2xl text-center text-primary rotate-[-1deg]">
+                      ✍ КАК РЕДАКТИРОВАТЬ?
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <span className="text-2xl">1️⃣</span>
+                      <p className="font-bold text-foreground">Выберите игру и статью для редактирования</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-2xl">2️⃣</span>
+                      <p className="font-bold text-foreground">Нажмите кнопку "РЕДАКТИРОВАТЬ" в статье</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-2xl">3️⃣</span>
+                      <p className="font-bold text-foreground">Внесите изменения и сохраните - они появятся после модерации</p>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </TabsContent>
             
@@ -497,6 +585,126 @@ const Index = () => {
                 <Button className="glow-red sketchy-border font-bold">
                   <Icon name="MessageSquare" size={16} className="mr-2" />
                   ОТВЕТИТЬ
+                </Button>
+              </DialogFooter>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={!!selectedWikiGame} onOpenChange={() => { setSelectedWikiGame(null); setSelectedWikiArticle(null); }}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-card sketchy-border">
+          {selectedWikiGame && !selectedWikiArticle && (
+            <>
+              <DialogHeader>
+                <div className="mb-4 sketchy-border overflow-hidden">
+                  <img src={selectedWikiGame.image} alt={selectedWikiGame.title} className="w-full h-48 object-cover filter contrast-125" />
+                </div>
+                <DialogTitle className="text-3xl text-center text-primary rotate-[-1deg]">
+                  📖 {selectedWikiGame.title} ВИКИ 📖
+                </DialogTitle>
+                <DialogDescription className="text-center font-bold text-foreground">
+                  Фэндом-энциклопедия игры, созданная сообществом
+                </DialogDescription>
+              </DialogHeader>
+              <div className="space-y-3 py-4">
+                {wikiData[selectedWikiGame.id as keyof typeof wikiData].map((article, idx) => (
+                  <Card 
+                    key={idx} 
+                    className="bg-card sketchy-border hover:glow-red transition-all cursor-pointer hover:rotate-[-1deg]"
+                    onClick={() => setSelectedWikiArticle(article)}
+                  >
+                    <CardHeader>
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <CardTitle className="text-lg mb-2 font-bold">{article.title}</CardTitle>
+                          <CardDescription className="font-bold text-xs mb-2">
+                            {article.content}
+                          </CardDescription>
+                          <div className="flex items-center gap-3 text-xs text-muted-foreground font-bold">
+                            <span>✍ {article.edits} правок</span>
+                            <span>•</span>
+                            <span>{article.lastEdit}</span>
+                          </div>
+                        </div>
+                        <Badge variant="secondary" className="ml-4 sketchy-border font-bold">
+                          <Icon name="FileEdit" size={12} className="mr-1" />
+                          {article.edits}
+                        </Badge>
+                      </div>
+                    </CardHeader>
+                  </Card>
+                ))}
+              </div>
+              <DialogFooter>
+                <Button className="w-full glow-red sketchy-border font-bold text-lg rotate-[1deg]">
+                  <Icon name="Plus" size={16} className="mr-2" />
+                  СОЗДАТЬ НОВУЮ СТАТЬЮ
+                </Button>
+              </DialogFooter>
+            </>
+          )}
+          {selectedWikiArticle && (
+            <>
+              <DialogHeader>
+                <div className="flex items-center gap-3 mb-4">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    onClick={() => setSelectedWikiArticle(null)}
+                    className="sketchy-border font-bold"
+                  >
+                    <Icon name="ArrowLeft" size={16} className="mr-1" />
+                    НАЗАД
+                  </Button>
+                  <Badge variant="outline" className="sketchy-border font-bold">
+                    ✍ {selectedWikiArticle.edits} правок
+                  </Badge>
+                </div>
+                <DialogTitle className="text-3xl text-primary rotate-[-1deg]">{selectedWikiArticle.title}</DialogTitle>
+                <DialogDescription className="font-bold text-xs">
+                  Последнее изменение: {selectedWikiArticle.lastEdit}
+                </DialogDescription>
+              </DialogHeader>
+              <div className="space-y-6 py-4">
+                <div className="sketchy-border p-6 bg-muted/20">
+                  <p className="text-foreground leading-relaxed font-bold text-lg">
+                    {selectedWikiArticle.content}
+                  </p>
+                  <div className="mt-6 space-y-3">
+                    <p className="font-bold text-foreground">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Здесь будет полный текст статьи с детальным описанием темы.
+                    </p>
+                    <p className="font-bold text-foreground">
+                      ⚠ ВНИМАНИЕ: Информация может содержать спойлеры! ⚠
+                    </p>
+                  </div>
+                </div>
+                <div className="sketchy-border p-4 bg-card">
+                  <h4 className="font-bold text-lg mb-3 text-primary">📝 ИСТОРИЯ ПРАВОК</h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between font-bold">
+                      <span>DarkLoremaster добавил 2 абзаца</span>
+                      <span className="text-muted-foreground">1 час назад</span>
+                    </div>
+                    <div className="flex justify-between font-bold">
+                      <span>WikiEditor исправил опечатки</span>
+                      <span className="text-muted-foreground">3 часа назад</span>
+                    </div>
+                    <div className="flex justify-between font-bold">
+                      <span>FanWriter обновил информацию</span>
+                      <span className="text-muted-foreground">1 день назад</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <DialogFooter className="flex gap-3">
+                <Button variant="outline" onClick={() => setSelectedWikiArticle(null)} className="sketchy-border font-bold">
+                  ЗАКРЫТЬ
+                </Button>
+                <Button className="glow-red sketchy-border font-bold">
+                  <Icon name="Edit" size={16} className="mr-2" />
+                  РЕДАКТИРОВАТЬ СТАТЬЮ
                 </Button>
               </DialogFooter>
             </>
